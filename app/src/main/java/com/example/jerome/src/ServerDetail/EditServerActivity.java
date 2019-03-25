@@ -1,10 +1,10 @@
 package com.example.jerome.src.ServerDetail;
 
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
 import com.example.jerome.src.R;
 
+import androidx.fragment.app.FragmentActivity;
 import sql.ServerDbHelper;
 
 

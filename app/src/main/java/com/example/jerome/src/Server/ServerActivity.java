@@ -2,7 +2,6 @@ package com.example.jerome.src.Server;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
@@ -10,8 +9,10 @@ import android.widget.ListView;
 import com.example.jerome.src.R;
 import com.example.jerome.src.ServerDetail.EditServerActivity;
 
+import androidx.fragment.app.FragmentActivity;
 
-public class ServerActivity extends FragmentActivity{
+
+public class ServerActivity extends FragmentActivity {
     ListView listView ;
 
     @Override

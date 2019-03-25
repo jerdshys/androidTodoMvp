@@ -1,7 +1,6 @@
 package com.example.jerome.src.ServerDetail;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.jerome.src.R;
 
+import androidx.fragment.app.Fragment;
 import sql.Models.Server;
 import sql.Repositories.ServerRepository;
 

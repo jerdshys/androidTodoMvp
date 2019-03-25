@@ -19,7 +19,7 @@ public class ServerDbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("DROP TABLE IF EXISTS Servers");
-        db.execSQL("DELETE FROM Servers");
+        //db.execSQL("DELETE FROM Servers");
         db.execSQL(DATABASE_CREATE);
     }
 

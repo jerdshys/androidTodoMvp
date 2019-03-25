@@ -4,11 +4,10 @@
     android:layout_height="wrap_content" android:paddingTop="10dp" android:paddingBottom="10dp">
 -->
 
-    <com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent" android:layout_height="80dp"   android:id="@+id/sample1"
-        >
-        <!-- Bottom View Start-->
 
+        <!-- Bottom View Start-->
+<LinearLayout             android:id="@+id/customList"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="match_parent" android:layout_width="match_parent">
         <LinearLayout
             android:id="@+id/bottom_wrapper"
             android:layout_width="80dp"
@@ -43,8 +42,7 @@
 
         </LinearLayout>
         <!-- Surface View End -->
-    </com.daimajia.swipe.SwipeLayout>
 
 
 
-
+</LinearLayout>

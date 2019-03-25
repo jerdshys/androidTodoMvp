@@ -4,21 +4,21 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.daimajia.swipe.SwipeLayout;
-import com.example.jerome.src.NewServer.NewServerActivity;
 import com.example.jerome.src.R;
 import com.example.jerome.src.ServerDetail.EditServerActivity;
 
 import java.util.ArrayList;
 
+import androidx.fragment.app.ListFragment;
 import sql.Models.Server;
 import sql.ServerDbHelper;
 import sql.Repositories.ServerRepository;
@@ -28,7 +28,7 @@ public class ServerFragment extends ListFragment implements ServerContract.View 
 
     private ServerContract.Presenter mPresenter;
     private ViewGroup container;
-    private SwipeLayout mSwipeLayout;
+    private LinearLayout mSwipeLayout;
     private ListAdapter mListAdapter;
 
     public ServerFragment() {
@@ -81,8 +81,8 @@ public class ServerFragment extends ListFragment implements ServerContract.View 
 
     @Override
     public void openNewServer() {
-        Intent i = new Intent(getContext(),NewServerActivity.class);
-        startActivity(i);
+       // Intent i = new Intent(getContext(),NewServerActivity.class);
+        //startActivity(i);
     }
 
     public void replaceData(ArrayList<Server> servers) {
@@ -164,27 +164,8 @@ public class ServerFragment extends ListFragment implements ServerContract.View 
                 }
             });
 
-            mSwipeLayout =  (SwipeLayout)row.findViewById(R.id.sample1);
-            //set show mode.
-            mSwipeLayout.setShowMode(SwipeLayout.ShowMode.LayDown);
-            //add drag edge.(If the BottomView has 'layout_gravity' attribute, this line is unnecessary)
-            mSwipeLayout.addDrag(SwipeLayout.DragEdge.Left, row.findViewById(R.id.bottom_wrapper));
+            mSwipeLayout =  (LinearLayout)row.findViewById(R.id.customList);
 
-            mSwipeLayout.addSwipeListener(new SwipeLayout.SwipeListener() {
-                @Override   //when the SurfaceView totally cover the BottomView.
-                public void onClose(SwipeLayout layout) { }
-                @Override  //you are swiping.
-                public void onUpdate(SwipeLayout layout, int leftOffset, int topOffset) {}
-                @Override
-                public void onStartOpen(SwipeLayout layout) { }
-                @Override //when the BottomView totally show.
-                public void onOpen(SwipeLayout layout) { }
-                @Override
-                public void onStartClose(SwipeLayout layout) { }
-                @Override //when user's hand released.
-                public void onHandRelease(SwipeLayout layout, float xvel, float yvel) {
-                }
-            });
 
 
             return row;
